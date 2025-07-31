@@ -1,16 +1,14 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
-import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import React from "react";
+import Navbar from "../components/Navbar";
+import Section from "../components/Section";
 
-export const Home = () => {
-
-  const {store, dispatch} =useGlobalReducer()
-
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-		</div>
-	);
-}; 
+export default function Home() {
+  return (
+    <div className="bg-black text-white min-h-screen">
+      <Navbar />
+      <Section title="Characters" endpoint="people" />
+      <Section title="Planets" endpoint="planets" />
+      <Section title="Vehicles" endpoint="vehicles" />
+    </div>
+  );
+}
