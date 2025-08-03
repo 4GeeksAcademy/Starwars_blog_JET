@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { StoreContext } from "../store";
+import { StoreContext } from "../store.jsx";
 
 export default function Navbar() {
   const { store } = useContext(StoreContext);
