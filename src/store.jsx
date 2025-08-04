@@ -9,7 +9,9 @@ function favoritesReducer(state, action) {
     case 'ADD_FAVORITE':
       if (
         state.items.some(
-          i => i.category === action.payload.category && i.id === action.payload.id
+          i =>
+            i.category === action.payload.category &&
+            i.id === action.payload.id
         )
       ) {
         return state;

@@ -1,0 +1,53 @@
+.navbar-logo {
+  height: 170px !important;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: gold;
+  cursor: pointer;
+}
+
+.fav-dropdown-btn {
+  min-width: 140px; /* enough for “Favorites (99+)” */
+  text-align: center;
+}
+
+.scroll-x {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+.scroll-x > .card {
+  flex: 0 0 auto;
+}
+
+/* thin scrollbar always visible */
+.scroll-x::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-x::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.scroll-x::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-navbar {
+  background-color: #000 !important;
+  padding-top: 0.25rem;               
+  padding-bottom: 0.25rem;
+  min-height: 2.5rem;           
+}
+
+/* adjust logo if needed */
+.custom-navbar .navbar-logo {
+  height: 30px;      /* or whatever smaller size you like */
+}

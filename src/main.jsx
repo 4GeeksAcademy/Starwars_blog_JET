@@ -1,21 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'  // Global styles for your application
-import { RouterProvider } from "react-router-dom";  // Import RouterProvider to use the router
-import { router } from "./routes";  // Import the router configuration
-import { FavoritesProvider } from './store.jsx';  // Import the FavoritesProvider for global state management
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-const Main = () => {
-    return (
-        <React.StrictMode>  
-            {/* Provide global state to all components */}
-            <FavoritesProvider> 
-                {/* Set up routing for the application */} 
-                <RouterProvider router={router} />
-            </FavoritesProvider>
-        </React.StrictMode>
-    );
-}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
-// Render the Main component into the root DOM element.
-ReactDOM.createRoot(document.getElementById('root')).render(<Main />)
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes';
+import { FavoritesProvider } from './store';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <FavoritesProvider>
+      <RouterProvider router={router} />
+    </FavoritesProvider>
+  </React.StrictMode>
+);
