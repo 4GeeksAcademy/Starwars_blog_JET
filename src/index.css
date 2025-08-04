@@ -3,15 +3,26 @@
 }
 
 .favorite-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: gold;
+  border: 2px solid #FFD700;   
+  background: transparent;  
+  color: #FFD700;     
+  border-radius: 4px;  
+  padding: 0.25rem; 
+  font-size: 1.25rem;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.favorite-btn.selected {
+  background-color: #FFD700;
+  color: white;
 }
 
 .fav-dropdown-btn {
-  min-width: 140px; /* enough for “Favorites (99+)” */
+  min-width: 140px;
   text-align: center;
 }
 
@@ -28,7 +39,6 @@
   flex: 0 0 auto;
 }
 
-/* thin scrollbar always visible */
 .scroll-x::-webkit-scrollbar {
   height: 8px;
 }
@@ -47,7 +57,6 @@
   min-height: 2.5rem;           
 }
 
-/* adjust logo if needed */
 .custom-navbar .navbar-logo {
-  height: 30px;      /* or whatever smaller size you like */
+  height: 30px;
 }
